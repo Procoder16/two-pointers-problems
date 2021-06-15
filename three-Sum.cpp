@@ -20,17 +20,16 @@ int main(){
 
     int n;
     cin>>n;
-    int arr[n];
 
-    for(int i = 0; i<n; i++){
-        cin>>arr[n];
-    }
+    vector<int> arr(n);
+    for(auto &i : arr)
+        cin>>i;
 
     int target;
     cin>>target;
 
     bool found = false;
-    sort(arr, arr+n);
+    sort(arr.begin(), arr.end());
 
     for(int i = 0; i < n; i++){
         int low = i+1, high = n-1;
